@@ -1,1 +1,1 @@
-default['ejabberd']['jabber_domain'] = node['fqdn']
+default['ejabberd']['jabber_domain'] = 'localhost'

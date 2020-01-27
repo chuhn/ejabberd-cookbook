@@ -30,10 +30,10 @@ service "ejabberd" do
   action :enable
 end
 
-template "/etc/ejabberd/ejabberd.cfg" do
-  source "ejabberd.cfg.erb"
+template "/etc/ejabberd/ejabber.yml" do
+  source "ejabberd.yml.erb"
   group 'ejabberd'
-  mode '755'
+  mode '0640'
   variables :jabber_domain => node['ejabberd']['jabber_domain']
   notifies :restart, resources('service[ejabberd]')
 end
